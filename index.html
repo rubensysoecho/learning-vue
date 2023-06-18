@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <style>
+        button  {
+            padding: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Esto es VUE</h1>
+    <div id="app">
+        <p>{{ title }} - {{ author }} - {{ edad }}</p>
+
+        <button v-on:click="edad++">Increase age</button>
+        <button v-on:click="edad--">Decrease age</button>
+        <div @click="changeTitle('The Witcher 2')" style="margin-top: 5px;">cambiar titulo</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
