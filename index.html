@@ -15,11 +15,16 @@
 <body>
     <h1>Esto es VUE</h1>
     <div id="app">
-        <p>{{ title }} - {{ author }} - {{ edad }}</p>
+        <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ edad }}</p>
+        </div>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-if="!showBooks">Show Books</span>
+        </button>
 
-        <button v-on:click="edad++">Increase age</button>
-        <button v-on:click="edad--">Decrease age</button>
-        <div @click="changeTitle('The Witcher 2')" style="margin-top: 5px;">cambiar titulo</div>
+        <div v-show="showBooks">dawdw</div>
+
     </div>
 
     <script src="app.js"></script>

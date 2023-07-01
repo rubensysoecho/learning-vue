@@ -1,14 +1,15 @@
 const app = Vue.createApp({
     data() {
         return {
+            showBooks: true,
             title: 'The Witcher',
             author: 'Andrzej Sapkowski',
             edad: 3
         }
     },
     methods: {
-        changeTitle(title) {
-            this.title = title
+        toggleShowBooks()   {
+            this.showBooks = !this.showBooks
         }
     }
 })
